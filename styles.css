@@ -1,0 +1,145 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: lowercase;
+    font-size: 1.5em;
+    color: #555555;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #555555;
+    margin-top: 1em;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: 0;
+}
+
+#topbar {
+    width: 100%;
+    height: 143px;
+    background-color: #555555;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+#container {
+    display: flex;
+    flex-flow: column;
+    min-height: 100%;
+    max-width: 640px;
+}
+
+#title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8em;
+    color: #ddd411;
+    margin-top: 80px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    min-height: 50px;
+    vertical-align: text-bottom;
+}
+
+#subtitle {
+    color: #555555;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#the-flex {
+    display: flex;
+    flex-flow: row;
+    min-width: 640px;
+    flex-shrink: 0;
+}
+
+#content {
+    font-family: 'Lustria', serif;
+    font-size: 0.9em;
+    color: #111111;
+    padding: 10px;
+    padding-left: 30px;
+    min-width: 470px;
+    flex-grow: 1;
+    border-bottom: solid 1px;
+    border-color: #eeeeee;
+}
+
+#navigation {
+    font-family: 'Open Sans', serif;
+    text-transform: lowercase;
+    font-size: 1em;
+    color: #888888;
+    margin-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-right: 1px solid;
+    border-color: #eeeeee;
+    min-width: 140px;
+}
+
+.nav-item {
+    border-color: #eeeeee;
+    padding-left: 10px;
+    border-bottom: 1px;
+    line-height: 2em;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navigation a:hover {
+    text-decoration: underline solid;
+}
+
+#navigation > #this {
+    text-decoration: underline solid;
+    background-color: #eeeeee;
+    color: #444444;
+}
+
+@media all and (max-width: 640px) {
+    #content {
+        min-width: 0px;
+    }
+
+    #navigation {
+        min-width: 0px;
+    }
+
+    #the-flex {
+        flex-direction: column;
+        min-width: 0;
+    }
+}
